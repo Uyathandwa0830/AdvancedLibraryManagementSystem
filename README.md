@@ -1,0 +1,11 @@
+This project aims to enhance the existing Library Management System by incorporating additional features such as tracking due dates for borrowed books, calculating overdue fines, background tasks for notifications and fine processing using multi-threading, and implementing data persistence through file operations.
+First task: Establish deadlines and late fees
+We're adding due dates for borrowed books and computing fines for past-due ones to the Book and Member classes' capabilities in this job.
+We will assign a due date for each book borrowed that is equal to the current date plus the pre-arranged loan duration (e.g., 14 days). Borrowers are certain to know when their books are due back thanks to this.
+We'll put in place a system to figure out fees for every day a book is over due. The detailed computation might be as simple as a daily rate or as complicated as taking into account varying rates over time. This makes it easier to handle late returns and enforce return dates.
+Task 2: Fine Processing and Background Notifications
+Here, we're implementing thread-based background processes to manage overdue or past-due book alerts and automatically adjust penalties.
+We'll start a thread that updates penalties in accordance with the number of late or past-due books it finds. This guarantees that penalties are computed quickly and precisely without interfering with the primary application flow.
+Notifications regarding late or owing books will be sent to members via a separate thread. This might entail creating reports or sending email simulations to debtors to serve as a reminder of their responsibilities. We guarantee seamless connection with borrowers by carrying out this background work without interfering with other processes.
+Task 3: Using File Streams for Persistence
+The goal of this assignment is to guarantee data permanence by leveraging file streams to load and save library data. We'll use streams to save data about books, members, and transaction logs to files. This guarantees that the data is safe and retrievable when needed, even in the event of an unexpected application closure. We will load the saved data from files when the program launches, enabling the system to function smoothly where it left off. This provides a smooth user experience and prevents loss of important information between sessions.
